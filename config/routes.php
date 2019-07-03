@@ -102,3 +102,8 @@ Router::scope('/', function (RouteBuilder $routes) {
  * });
  * ```
  */
+
+ Router::scope('/api', ['prefix' => 'api'], function ($routes){
+     $routes->setExtensions(['json', 'xml']);
+     $routes->resources('Users');
+ });

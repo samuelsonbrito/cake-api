@@ -45,7 +45,7 @@ class AppController extends Controller
             'enableBeforeRedirect' => false,
         ]);
         $this->loadComponent('Flash');
-        $this->loadComponent('Auth');
+        $this->loadComponent('Auth',['authenticate' => ['Form', 'ADmad/JwtAuth.Jwt']]);
 
         /*
          * Enable the following component for recommended CakePHP security settings.

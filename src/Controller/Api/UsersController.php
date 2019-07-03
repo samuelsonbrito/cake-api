@@ -16,6 +16,10 @@ class UsersController extends AppController
     public function index()
     {
         $users = $this->Users->find('all');
+        $this->set([
+            'users' => $users,
+            '_serialize' => ['users']
+        ]);
     }
 
 }
